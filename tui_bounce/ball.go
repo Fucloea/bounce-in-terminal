@@ -5,6 +5,7 @@ type Ball struct {
 	Y int
 	Xspeed int
 	Yspeed int
+	bounces int
 }
 
 func (b *Ball) Display() rune {
@@ -19,9 +20,13 @@ func (b *Ball) Update() {
 func (b *Ball) checkEdges(mw int, mh int){
 	if b.X <= 0 || b.X > mw{
 		b.Xspeed*=-1
+		b.bounces++
+
 	}
 
 	if b.Y<=0 || b.Y > mh{
 		b.Yspeed*=-1
+		b.bounces++
 	}
 }
+

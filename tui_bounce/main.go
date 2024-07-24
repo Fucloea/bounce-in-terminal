@@ -23,6 +23,7 @@ func main() {
 		Y: 1,
 		Xspeed: 1,
 		Yspeed:1,
+		bounces: 1,
 	}
 
 	game := Game { 
